@@ -6,7 +6,7 @@ python3.7 requests-html
 ~~因为cnki.net用了一些反爬措施，解析起来比较困难，所以用了search.cnki.com.cn这个接口。
 比较： yuanjian.cnki.net的搜索等于search.cnki.com.cn的全文检索；search.cnki.com.cn比cnki的检索少了英文文献。  
 此外，似乎cnki在更新，现在每个文献的详细页面都是新版了，引文网络比较全，而search.cnki.com.cn点进去还是之前的版本，引文很少，有些几乎没有。
-同学们有空可以研究一下cnki.net咋爬...~~~
+同学们有空可以研究一下cnki.net咋爬...~~
 
 search.cnki.com.cn的引文太不全，而且数据库也不知道全不全。因此还是直接爬cnki。
 ### TODO
@@ -25,8 +25,4 @@ get_detail接收详细页链接的url，返回一个iterator，也就是GetDetai
 basic_config保存了一些基本参数，如请求头、线程睡眠时间。    
 抓取到的结果都返回到变量中，以便写数据库。
 
-=====================================
-
-## update
-放弃使用search.cnki.com.cn接口，因为引文网络太少了。重写爬虫ing..
 
