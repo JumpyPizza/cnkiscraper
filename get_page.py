@@ -42,10 +42,10 @@ class GetPage():
         # 此处可以更改搜索参数
         search_condition = {
             '主题':'SU$%=|',
-            '关键词':'KY',
-            '篇名':'TI',
-            '摘要':'AB',
-            '全文':'FT'
+            '关键词':'KY$=|',
+            '篇名':'TI$%=|',
+            '摘要':'AB$%=|',
+            '全文':'FT$%=|'
         }
         u_input = {'txt_1_sel': '',
                    'txt_1_value1': '',
@@ -76,13 +76,6 @@ class GetPage():
                 cite_count = cite_count.text
             else:
                 cite_count = 0
-        #   down_count = row.find('span[class="downloadCount"]', first=True)
-        #   row是一个td，但是td的子元素中定位不到下载量，待解决。直接从chrome上copy下来的xpath也没法定位到这个元素...从详情页得到了下载量
-        #   if down_count:
-        #     down_count = down_count.text
-        #   else:
-        #     down_count = 0
-        #   print(down_count)
             print(title)
             print(detail_url)
             print(author)
@@ -97,7 +90,7 @@ class GetPage():
 
 if __name__ == '__main__':
     page = GetPage()
-    page.getSearchResult("电子显微镜", "主题")
+    page.getSearchResult("电子显微镜", "全文")
 
 
 
